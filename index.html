@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom's Desktop</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===================== DESKTOP ===================== -->
+  <div id="desktop">
+
+    <!-- Desktop icons (left-side grid) -->
+    <div id="icons">
+      <button class="desktop-icon" data-window="biography" aria-label="Open Biography">
+        <img class="icon-glyph" src="assets/w95_24.ico" alt="" />
+        <span class="icon-label">Biography</span>
+      </button>
+      <button class="desktop-icon" data-window="links" aria-label="Open Links">
+        <img class="icon-glyph" src="assets/w95_14.ico" alt="" />
+        <span class="icon-label">Links</span>
+      </button>
+      <button class="desktop-icon" data-window="contact" aria-label="Open Contact">
+        <img class="icon-glyph" src="assets/w98_mailbox_world.ico" alt="" />
+        <span class="icon-label">Contact</span>
+      </button>
+      <button class="desktop-icon" data-window="minesweeper" aria-label="Open Minesweeper">
+        <img class="icon-glyph" src="assets/minesweeper.svg" alt="" />
+        <span class="icon-label">Minesweeper</span>
+      </button>
+      <button class="desktop-icon" data-window="skifree" aria-label="Open SkiFree">
+        <img class="icon-glyph" src="assets/skifree.gif" alt="" />
+        <span class="icon-label">SkiFree</span>
+      </button>
+    </div>
+
+    <!-- ===================== WINDOWS ===================== -->
+
+    <!-- Biography -->
+    <section class="window" id="win-biography" data-window="biography" role="dialog" aria-label="Biography" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">📖</span> Biography</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Hi, I'm <strong>Tom</strong> — I live in Charleston, SC and have a wife and a couple of kids. </p>
+        <p>Sometimes I write code and other times I let code write code.</p>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="window" id="win-links" data-window="links" role="dialog" aria-label="Links" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">🌐</span> Links</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Find me around the web:</p>
+        <div class="link-list">
+          <a class="win-button" href="https://github.com/thomasjoyner" target="_blank" rel="noopener">🐙 GitHub</a>
+          <a class="win-button" href="https://twitter.com/thomasjoyner" target="_blank" rel="noopener">🐦 Twitter / X</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="window" id="win-contact" data-window="contact" role="dialog" aria-label="Contact" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">✉️</span> Contact</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Get in touch:</p>
+        <p>📧 <a href="mailto:notsocrankytom@gmail.com">notsocrankytom@gmail.com</a></p>
+        <p>📍 Charleston, SC</p>
+        <p>Or reach out via any of the links in the Links window.</p>
+      </div>
+    </section>
+
+    <!-- Minesweeper -->
+    <section class="window" id="win-minesweeper" data-window="minesweeper" role="dialog" aria-label="Minesweeper" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">💣</span> Minesweeper</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body ms-body">
+        <div class="ms-frame">
+          <div class="ms-header">
+            <div class="ms-counter" id="ms-mine-count">010</div>
+            <button class="ms-face" id="ms-face" aria-label="New game">🙂</button>
+            <div class="ms-counter" id="ms-timer">000</div>
+          </div>
+          <div class="ms-grid" id="ms-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SkiFree (embeds the hosted basicallydan/skifree.js game) -->
+    <section class="window" id="win-skifree" data-window="skifree" role="dialog" aria-label="SkiFree" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">⛷️</span> SkiFree</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body ski-body">
+        <p class="ski-hint">Click the game to give it focus, then use the arrow keys to ski. Avoid the trees — and the yeti!</p>
+        <iframe class="ski-frame" title="SkiFree"
+                data-src="https://basicallydan.github.io/skifree.js/"
+                loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <!-- About (opened from Start menu) -->
+    <section class="window" id="win-about" data-window="about" role="dialog" aria-label="About" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><span class="title-icon">💻</span> About This Desktop</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p><strong>Tom's Desktop</strong> v1.0</p>
+        <p>Just dorking around to try and not fall too far behind the movements in tech.</p>
+        <p>&copy; <span id="about-year"></span> Tom</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===================== START MENU ===================== -->
+  <div id="start-menu" hidden>
+    <div class="start-sidebar"><span>Portfolio</span></div>
+    <ul class="start-list">
+      <li data-window="biography"><span class="start-glyph">📖</span> Biography</li>
+      <li data-window="links"><span class="start-glyph">🌐</span> Links</li>
+      <li data-window="contact"><span class="start-glyph">✉️</span> Contact</li>
+      <li data-window="minesweeper"><span class="start-glyph">💣</span> Minesweeper</li>
+      <li data-window="skifree"><span class="start-glyph">⛷️</span> SkiFree</li>
+      <li class="start-divider" data-window="about"><span class="start-glyph">💻</span> About</li>
+      <li id="shutdown"><span class="start-glyph">🔌</span> Shut Down...</li>
+    </ul>
+  </div>
+
+  <!-- ===================== TASKBAR ===================== -->
+  <div id="taskbar">
+    <button id="start-button">
+      <img id="start-logo" src="assets/start.png" alt="" /><span>Start</span>
+    </button>
+    <div id="task-buttons"></div>
+    <div id="clock" aria-live="off">12:00 PM</div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/minesweeper.js"></script>
+</body>
+</html>
