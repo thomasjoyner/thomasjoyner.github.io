@@ -206,6 +206,39 @@
     });
   });
 
+  /* ---------- Explorer (My Computer / folder) icons ---------- */
+  document.querySelectorAll(".explorer-icon").forEach(function (icon) {
+    const target = icon.dataset.window;
+
+    icon.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const scope = icon.closest(".explorer-icons");
+      scope.querySelectorAll(".explorer-icon.selected")
+        .forEach(function (i) { i.classList.remove("selected"); });
+      icon.classList.add("selected");
+    });
+
+    // Icons that point to another window open it like a folder
+    if (target) {
+      icon.addEventListener("dblclick", function () { openWindow(target); });
+      icon.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openWindow(target);
+        }
+      });
+    }
+  });
+  // Clear drive selection when clicking empty space inside an Explorer window
+  document.querySelectorAll(".explorer-body").forEach(function (body) {
+    body.addEventListener("mousedown", function (e) {
+      if (!e.target.closest(".explorer-icon")) {
+        body.querySelectorAll(".explorer-icon.selected")
+          .forEach(function (i) { i.classList.remove("selected"); });
+      }
+    });
+  });
+
   // Clear icon selection when clicking empty desktop
   document.getElementById("desktop").addEventListener("mousedown", function (e) {
     if (e.target.id === "desktop" || e.target.id === "icons") {

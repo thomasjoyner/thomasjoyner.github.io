@@ -12,6 +12,10 @@
 
     <!-- Desktop icons (left-side grid) -->
     <div id="icons">
+      <button class="desktop-icon" data-window="mycomputer" aria-label="Open My Computer">
+        <img class="icon-glyph" src="assets/w95_mycomputer.ico" alt="" />
+        <span class="icon-label">My Computer</span>
+      </button>
       <button class="desktop-icon" data-window="biography" aria-label="Open Biography">
         <img class="icon-glyph" src="assets/w95_24.ico" alt="" />
         <span class="icon-label">Biography</span>
@@ -35,6 +39,201 @@
     </div>
 
     <!-- ===================== WINDOWS ===================== -->
+
+    <!-- My Computer -->
+    <section class="window" id="win-mycomputer" data-window="mycomputer" role="dialog" aria-label="My Computer" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_mycomputer.ico" alt="" /> My Computer</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-icons">
+          <div class="explorer-icon" data-window="cdrive" tabindex="0" role="button" aria-label="Open [C:]">
+            <img class="explorer-glyph" src="assets/w95_9.ico" alt="" />
+            <span class="explorer-label">[C:]</span>
+          </div>
+          <div class="explorer-icon" data-window="ddrive" tabindex="0" role="button" aria-label="Open [D:]">
+            <img class="explorer-glyph" src="assets/w95_12.ico" alt="" />
+            <span class="explorer-label">[D:]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [C:] drive -->
+    <section class="window" id="win-cdrive" data-window="cdrive" role="dialog" aria-label="[C:]" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_9.ico" alt="" /> [C:]</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Coming soon!</p>
+      </div>
+    </section>
+
+    <!-- [D:] drive -->
+    <section class="window" id="win-ddrive" data-window="ddrive" role="dialog" aria-label="[D:]" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_12.ico" alt="" /> [D:]</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-icons">
+          <div class="explorer-icon" data-window="funstuff" tabindex="0" role="button" aria-label="Open FUNSTUFF">
+            <img class="explorer-glyph" src="assets/w95_folder.ico" alt="" />
+            <span class="explorer-label">Funstuff</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNSTUFF folder -->
+    <section class="window" id="win-funstuff" data-window="funstuff" role="dialog" aria-label="FUNSTUFF" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_folder.ico" alt="" /> FUNSTUFF</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-icons">
+          <div class="explorer-icon" data-window="hover" tabindex="0" role="button" aria-label="Open Hover">
+            <img class="explorer-glyph" src="assets/w95_folder.ico" alt="" />
+            <span class="explorer-label">Hover</span>
+          </div>
+          <div class="explorer-icon" data-window="pictures" tabindex="0" role="button" aria-label="Open Pictures">
+            <img class="explorer-glyph" src="assets/w95_folder.ico" alt="" />
+            <span class="explorer-label">Pictures</span>
+          </div>
+          <div class="explorer-icon" data-window="videos" tabindex="0" role="button" aria-label="Open Videos">
+            <img class="explorer-glyph" src="assets/w95_folder.ico" alt="" />
+            <span class="explorer-label">Videos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hover folder -->
+    <section class="window" id="win-hover" data-window="hover" role="dialog" aria-label="Hover" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_folder.ico" alt="" /> Hover</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Coming soon!</p>
+      </div>
+    </section>
+
+    <!-- Pictures folder -->
+    <section class="window" id="win-pictures" data-window="pictures" role="dialog" aria-label="Pictures" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_folder.ico" alt="" /> Pictures</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-icons">
+          <div class="explorer-icon" data-window="clouds" tabindex="0" role="button" aria-label="Open Clouds.bmp">
+            <img class="explorer-glyph" src="assets/w95_bitmap.ico" alt="" />
+            <span class="explorer-label">Clouds.bmp</span>
+          </div>
+          <div class="explorer-icon" data-window="win95bmp" tabindex="0" role="button" aria-label="Open Win95.bmp">
+            <img class="explorer-glyph" src="assets/w95_bitmap.ico" alt="" />
+            <span class="explorer-label">Win95.bmp</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clouds.bmp viewer -->
+    <section class="window" id="win-clouds" data-window="clouds" role="dialog" aria-label="Clouds.bmp" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_bitmap.ico" alt="" /> Clouds.bmp</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body image-body">
+        <img class="image-view" src="assets/CLOUDS.BMP" alt="Clouds.bmp" />
+      </div>
+    </section>
+
+    <!-- Win95.bmp viewer -->
+    <section class="window" id="win-win95bmp" data-window="win95bmp" role="dialog" aria-label="Win95.bmp" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_bitmap.ico" alt="" /> Win95.bmp</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body image-body">
+        <img class="image-view" src="assets/WIN95.BMP" alt="Win95.bmp" />
+      </div>
+    </section>
+
+    <!-- Videos folder -->
+    <section class="window" id="win-videos" data-window="videos" role="dialog" aria-label="Videos" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_folder.ico" alt="" /> Videos</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body explorer-body">
+        <div class="explorer-icons">
+          <div class="explorer-icon" data-window="weezer" tabindex="0" role="button" aria-label="Open Weezer.avi">
+            <img class="explorer-glyph" src="assets/w95_video.ico" alt="" />
+            <span class="explorer-label">Weezer.avi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weezer.avi player -->
+    <section class="window" id="win-weezer" data-window="weezer" role="dialog" aria-label="Weezer.avi" hidden>
+      <div class="title-bar">
+        <span class="title-bar-text"><img class="title-icon-img" src="assets/w95_video.ico" alt="" /> Weezer.avi</span>
+        <div class="title-bar-controls">
+          <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+          <button class="tb-btn" data-action="maximize" aria-label="Maximize">▢</button>
+          <button class="tb-btn" data-action="close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="window-body video-body">
+        <iframe class="video-frame" title="Weezer.avi"
+                data-src="https://www.youtube.com/embed/J3Uclf3Vbuo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"></iframe>
+      </div>
+    </section>
 
     <!-- Biography -->
     <section class="window" id="win-biography" data-window="biography" role="dialog" aria-label="Biography" hidden>
@@ -150,6 +349,7 @@
   <div id="start-menu" hidden>
     <div class="start-sidebar"><span>Portfolio</span></div>
     <ul class="start-list">
+      <li data-window="mycomputer"><span class="start-glyph"><img class="start-glyph-img" src="assets/w95_mycomputer.ico" alt="" /></span> My Computer</li>
       <li data-window="biography"><span class="start-glyph">📖</span> Biography</li>
       <li data-window="links"><span class="start-glyph">🌐</span> Links</li>
       <li data-window="contact"><span class="start-glyph">✉️</span> Contact</li>
