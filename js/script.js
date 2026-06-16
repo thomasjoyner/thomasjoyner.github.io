@@ -62,6 +62,12 @@
     win.hidden = true;
     win.classList.remove("active", "maximized");
     win.dataset.placed = "";
+    // Stop any embedded media (e.g. the YouTube video) by unloading its
+    // iframe. openWindow() reloads it from data-src the next time it opens.
+    const lazyFrame = win.querySelector("iframe[data-src]");
+    if (lazyFrame && lazyFrame.src) {
+      lazyFrame.removeAttribute("src");
+    }
     openWindows.delete(name);
     rebuildTaskButtons();
   }
